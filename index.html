@@ -1,0 +1,59 @@
+<!DOCTYPE html> <!--크게 필요 X, 문서의 유형을 정의-->
+<html lang = "en"> <!--문서의 루트요소, 시작을 표시-->
+<Head>
+    <meta charset="UTF-8"><!--컴퓨터가 인간의 언어를 이해하기 위해서 UTF-8 같은 언어를 사용.-->
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    
+   <title>블랙코딩</title>
+    <link rel = "stylesheet" href = "style.css">
+</Head>
+<body><!--가상의 빈상자, 빈 상자 안에 내용물을 넣을 때까지 함.-->
+    <div id="wrapper" class ="wrapper">
+        <form id ="registrationForm" class = "registrationForm"action="">
+            <!--프론트서버에서 백앤드 서버로 데이터를 넘겨야 할 떄-->
+            <h2>회원등록</h2><!--문자가 일반문자들보다 일반적으로 더 크다.-->
+            <div class = "inputGroup">
+                <label for="nickname">사용자이름</label> <!--라벨태그 => input태그와 같이 쓰임.-->
+                <input type="text" id = "nickname" class = "nicknameInput">
+                <!--글자들을 입력할 수 있게 해주는 입력창-->
+                <span class = "helperText">알림</span>
+                 <!--글자들을 화면에 띄어줌.인라인 주소 표시-->
+            </div>
+            <div>
+                <div class = "inputGroup">
+                <label for="userEmail">이메일 주소</label>
+                <!--label태그는 input 태그와 거의 같이 쓰인다.-->
+                <input type="email"id="userEmail"class ="emailInput">
+                <span class = "helperText">알림</span> <!--/*글자 표현*/-->
+            </div>
+            <div>
+                <div class = "inputGroup">
+                <label for="userPassword">비밀번호</label>
+                <input type="password" id = "userPassword" class = "passwordInput">
+                <span class = "helperText">알림</span>
+            </div>  
+            <div>
+                <div class = "inputGroup">
+                <label for="confirmPassword">비밀번호 확인</label>
+                <input type="password" id = "confirmPassword" class = "confirmPasswordInput">
+                <span class = "helperText">알림</span>
+            </div>
+            <div>
+                 <div class = "inputGroup">
+                <label for="nickname">전화번호</label>
+                <input type="tel" id ="phone" class = phoneInput>
+                 <span class = "helperText">예:010-1234-5678</span>
+            </div>
+            <button type="submit">등록 완료</button>
+        </form>
+    </div></dive>
+</body>
+</html>
+
+
+<!--content : width, height(크기) 표현>
+<!- padding: 픽셀로 가질 수 있기 때문에 색깔은 필요.(10px)>
+<!- border  2px solid red;, 너비/기본색/빨강색 푯>
+<!- margin top,right,bottom,left의 px 표시.>
+<!-display : css(레이아웃 구성 - 단락(2차원), 공간(3차원) 표현.)
+

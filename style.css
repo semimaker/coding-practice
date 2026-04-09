@@ -1,0 +1,100 @@
+:root{
+    --primaryColor:green;
+    --errorColor:orange;
+}
+/*css에 변수를 선언할 때는 root{}이렇게 입력하고 {}안에다가 key, value
+값으로 정해짐.*/
+
+html{
+    box-sizing:border-box;
+    /*박스모델(content, padding, border, margin) 설정
+    content-bot는 영역 크기를 지정할 떄 패딩과 테투리를 제외한 content 크기만을 계산.*/
+    /*border-box는 영역의 크기를 지정할 때 패딩과 테두리를 포함한 content 크기 계산.*/
+    /* 일반적으로 인간은 컨텐츠 크기를 지정할 떄 패딩과 테두리도 포함입니다.*/  
+}
+
+body{
+    display:flex;
+    align-items:center; /*수직중앙정렬*/
+    justify-content:center; /*수평중앙정렬*/
+    min-height:100vh; /*뷰포트의 높이를 100%를 최소높이로 지정*/
+    background-color:white;
+}
+/* //display:flex를 먹인 태그 : 부모 태그, div 태그 : 자식 태그*/
+#wrapper{
+    width:420px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,0.2);
+    /*0px :수평 방향 그림자,
+     4px : 수직 방향 그림자
+    14px : 그림자의 블러값을 적용,
+     rbga : 그림자 색깔*/
+}      
+h2{
+    text-align:center;
+   /*margin-top:20px;*/
+}
+
+.inputGroup{
+    padding:8px 12px; /*8px은 패딩을 위아래로 8px씩 12px는 패딩을 왼쪽, 오른쪽으로 12px씩 줍니다.*/
+
+}
+
+.inputGroup label{
+    display:block;
+    padding:12px 0; /*8px은 패딩을 위아래로 8px씩 12px는 패딩을 왼쪽, 오른쪽으로 12px씩 줍니다.*/
+}
+
+.inputGroup input{
+    display:block;/*block은 2,3차원을 차지하고 있다.*/
+    width:93%; /*입력 칸의 좌우 넓이를 조정할 떄 사용. */
+    padding:12px; /*8px은 패딩을 위아래로 8px씩 12px는 패딩을 왼쪽, 오른쪽으로 12px씩 줍니다.*/
+    border:2px solid #e2e2e2;
+    font-size:16px;
+}
+
+.inputGroup input:focus{
+    outline:none; /*테두리를 안보이게 하는 거*/
+    border-color:#777; /*'테투리' 색깔 지정*/
+}
+
+.inputGroup.vaild input{
+    border-color:var(--primaryColor);
+    /*테두리 색깔이 초록색*/
+    /*.vaild는 자바스크립트로 가상의 css 선택자를 설정한다.*/
+    /* var(--primaryColor) => green */
+}
+
+
+.inputGroup.invaild input{
+    border-color:var(--errorColor);
+    /*테두리 색깔이 초록색*/
+    /*.vaild는 자바스크립트로 가상의 css 선택자를 설정한다.*/
+    /* var(--primaryColor) => green */
+    visibility: visible; 
+}
+
+.inputGroup.helperText{
+    display:block;
+    padding-top:8px;
+}
+
+.inputGroup.vaild.helperText{
+   visibility: hidden; 
+}
+
+.inputGroup.invaild.helperText{
+    color:var(--errorColor); 
+}
+
+#wrapper button{
+    display:block;
+    width:85%;
+    margin: 0 auto;
+    height: 50px;
+    margin-bottom:25px;
+    font-size:18px;
+    background-color:var(--primaryColor);
+    border:2px solid var(--primaryColor);
+    color:white;
+    cursor:pointer;
+}/*버튼 정보*/
