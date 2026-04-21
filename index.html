@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Caculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <figure class="bg">
+    <img src="민백-38272_전자계산기.jpg">
+    </figure>
+    <!-- 로그인 영역 -->
+    <div class="login-box">
+        <h2>LOGIN</h2>
+        <input type="text" id="user" placeholder="아이디">
+        <input type="password" id="pw" placeholder="비밀번호">
+        <button onclick="login()">로그인</button>
+    </div>
+
+    <!-- 로그인 후 보여줄 영역, 계산기 -->
+    <div id="main" class="hidden">
+        <h1>계산기</h1>
+        <div class="calculator">
+            <input type="text" id="calc-display" readonly>
+            <div class="buttons">
+                <button onclick="calc('1')">1</button>
+                <button onclick="calc('2')">2</button>
+                <button onclick="calc('3')">3</button>
+                <button onclick="calc('-')">-</button>
+
+                <button onclick="calc('4')">4</button>
+                <button onclick="calc('5')">5</button>
+                <button onclick="calc('6')">6</button>
+                <button onclick="calc('+')">+</button>
+                
+                 <button onclick="calc('7')">7</button>
+                <button onclick="calc('8')">8</button>
+                <button onclick="calc('9')">9</button>
+                <button onclick="calc('0')">0</button>
+
+                <button onclick="result()">=</button>
+                <button onclick="clearCalc()">C</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

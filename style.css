@@ -1,0 +1,159 @@
+.bg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*z-index: -1; /* 뒤로 보내기 */
+}
+
+.bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+figure{
+    position : relative; /* 자식 요소 기준 */
+    display : inline-block;
+}
+figcaption{
+    position : absolute;
+    top : 0;
+    right : 0;
+}
+body {
+    background-position : center center;/*이미지 반복 안 함*/
+    background-size : cover; /*화면 크기에 맞게 비율 조절*/
+    background-attachment: fixed; /* 스크롤 시 배경 고정*/
+
+    /*로그인 박스 이미지와 겹치도록 가운데 설정*/
+    display : flex;
+    justify-content: center;
+    align-items: center; 
+}
+.login-box {
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+
+    width: 300px;/*로그인 박스 좌우 넓이 확장*/
+    margin: 100px auto; /*박스의 위아래 위치 설정*/
+    padding: 20px; /*안에서 박스 넓이를 넓여가는 설정*/
+    background: rgba(30, 74, 13, 0.763); /*색깔 조정*/
+    color: black; /*login 글씨 변경 */
+    text-align: center; /*박스 안 전체 위치 변경 */
+    border-radius: 10px; /*모서리 둥근 거 표현*/
+}
+
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,30px);
+    gap: 10px;
+}/*계산기 줄 바꿈*/
+
+.login-box input {
+    width: 90%; 
+    padding: 10px;
+    margin: 10px 0;
+}/*로그인 메뉴 창 조정*/
+
+button {
+    padding: 10px 10px; /*하단 및 우측 영역 확장*/
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.calculator {
+    margin-top: 30px;
+}
+
+/*로그인 후 계산기 꾸며주기*/
+#main{
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate(-50%, -50%);
+    /*display : flex; 이거 때문에 로그인 후 창이 튀어나옴.*/
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    height : 100vh;
+    text-align : center;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    background-image: url("배경이미지.jpg");
+    background-size: cover;
+    background-position: center;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}/*전체 가운데 정렬, 배경 흐림*/
+
+.calculator {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    text-align: center;
+}/*유리 같은 느낌 형성*/
+.calculator h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}/*제목 스타일*/
+
+#display {
+    width: 100%;
+    height: 100px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}/*입력창*/
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    gap: 10px;
+    justify-content: center;
+}/*버튼 레이아웃*/
+button {
+    height: 50px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: white;
+    transition: 0.2s;
+}/*버튼 디자인*/
+button:hover {
+    background: #ddd;
+    transform: scale(1.05);
+}/*버튼 hover 효과/*/
+
+.operator {
+    background: #ff9f43;
+    color: white;
+}
+
+.equal {
+    background: #10ac84;
+    color: white;
+}
+
+.clear {
+    background: #ee5253;
+    color: white;
+}/*기능별 색상 구분*/
